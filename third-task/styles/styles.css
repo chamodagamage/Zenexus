@@ -1,0 +1,171 @@
+body {
+  background-color: #33afbc;
+}
+
+.row {
+  padding: 0 10%;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  color: #F3FFE2;
+}
+
+.header h1 {
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 98px;
+  text-align: center;
+}
+
+.header p {
+  color: #F3FFE2;
+  padding: 0 30px;
+}
+
+.image-container {
+  width: 100%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto;
+}
+
+.circle {
+  background-image: url(../images/new-zealand-mountain.jpg);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  cursor: pointer;
+  max-width: 300px;
+  height: 300px;
+  background-position: 60% 80%;
+  background-size: 350%;
+  border-radius: 100%;
+}
+
+.circle:hover {
+  background-size: 400%;
+}
+
+.rectangle {
+  background-image: url(../images/new-zealand-river.jpg);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  cursor: pointer;
+  max-width: 100%;
+  height: 50%;
+  background-position: 50% 35%;
+  background-size: 275%;
+  margin: 20px auto;
+}
+
+.rectangle:hover {
+  background-size: 325%;
+}
+
+.square {
+  background-image: url(../images/new-zealand-doudful-sound.jpg);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  cursor: pointer;
+  max-width: 300px;
+  height: 300px;
+  background-position: 50% 80%;
+  background-size: 275%;
+}
+
+.square:hover {
+  background-size: 325%;
+}
+
+.trangle {
+  width: 100%;
+  padding-bottom: 70.9219858%;
+  position: relative;
+  top: -60px;
+  left: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.trangle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/sun-rise.jpg);
+  background-position: 35% 80%;
+  background-size: 275%;
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.trangle:hover::before {
+  background-size: 325%;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #33afbc;
+  z-index: 2;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.overlay h2 {
+  color: #F3FFE2;
+  width: 30%;
+  position: absolute;
+  top: 15%;
+  left: 40%;
+}
+
+.overlay img {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+/*# sourceMappingURL=styles.css.map */

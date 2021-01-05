@@ -1,0 +1,156 @@
+$fontColor : #F3FFE2;
+$bgColor : #33afbc;
+$fontFamily: 'Open Sans';
+
+@mixin fontStyle {
+    color: $fontColor;
+}
+@mixin imageStyles {
+    height: 100%;
+    width: 100%;
+    background-position: center; 
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    cursor: pointer;
+    
+}
+
+body {
+   background-color: $bgColor;
+  
+}
+.row{
+    padding: 0 10%;
+}
+
+.header{
+    width: 100%;
+    text-align: center;
+    @include fontStyle();
+    h1{
+        font-weight: 800;
+        font-size: 72px;
+        line-height: 98px;
+        text-align: center;  
+    }
+    
+    p{
+        @include fontStyle();
+        padding: 0 30px;
+    }
+}
+
+.image-container{
+    
+    width:100%;
+    height: 300px;
+    display: flex;
+    align-items: center;  
+    margin: 20px auto;
+}
+.circle{
+
+    background-image: url(../images/new-zealand-mountain.jpg);
+    @include imageStyles();
+    max-width:300px;
+    height: 300px;
+    background-position:60% 80%;
+    background-size:350%;
+    border-radius: 100%;
+    &:hover{
+        background-size:400%;
+    }
+
+} 
+.rectangle{
+    background-image: url(../images/new-zealand-river.jpg);
+    @include imageStyles();
+    max-width: 100%;
+    height: 50%;
+    background-position:50% 35%;
+    background-size:275%;
+    margin: 20px auto;
+    &:hover{
+        background-size:325%;
+    }
+
+}
+
+.square{
+    background-image: url(../images/new-zealand-doudful-sound.jpg);
+    @include imageStyles();
+    max-width:300px;
+    height: 300px;
+    background-position:50% 80%;
+    background-size:275%;
+    &:hover{
+        background-size:325%;
+    }   
+}
+
+.trangle{
+    width:100%;
+    padding-bottom:70.9219858%;
+    position:relative;
+    top: -60px; 
+    left: 10px;
+    overflow:hidden;
+    margin: 0 auto;
+    transform-origin:0 100%;
+    transform: rotate(45deg);
+    &::before{
+        content:'';
+        position:absolute;
+        top: 0; 
+        left:0;
+        width:100%; height:100%;
+        background-image: url(../images/sun-rise.jpg);
+        background-position:35% 80%;
+        background-size:275%;
+        transform-origin:0 100%;
+        transform: rotate(-45deg);
+    }
+    &:hover::before{
+        background-size:325%;
+        cursor: pointer;
+    }
+}
+
+.overlay{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $bgColor;
+    z-index: 2;
+    cursor: pointer;
+    align-items: center;
+    .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+      }
+      h2{
+          @include fontStyle();
+          width: 30%;
+          position: absolute;
+          top:15%;
+          left:40%;
+      }
+      img{
+          width: 50%;
+          height: 50%;
+          position: absolute;
+          top:25%;
+          left:25%;
+      }
+}
+
+
